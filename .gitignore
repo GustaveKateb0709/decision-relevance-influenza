@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+._*
+
+# raw data (download with data/fetch_data.py instead)
+data/*.csv
+!data/DATA_NOTES.md
+
+# model checkpoints (pre-trained bounded NPEs are committed)
+*.pt
+!checkpoints/*.pt
+
+# figures of intermediate quality
+figures/*.png
+
+# editor / scratch
+.vscode/
+.idea/
+*_log.txt
+~$*
