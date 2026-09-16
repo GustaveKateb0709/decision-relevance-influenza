@@ -1,0 +1,31 @@
+{
+  "issue": "LAMBDA_COST is mis-calibrated by a double-counted i0 in src/calibrate.py",
+  "status": "RESOLVED. The fix was applied to src/model.py and src/calibrate.py by a teammate at ~03:06 (model.py sha1 1e28a351fcd6277d738a44162fda62d9542d04d3, LAMBDA_COST = 0.009827704). results/cells.csv and results/npe_meta.json were re-run WITHOUT --lam so they are self-consistent with the official constant; the re-run is numerically identical to the --lam=0.00982770365058944 run (max abs diff 5e-4, one discrete ppf_control cell).",
+  "fix_applied_in_model_py": 0.009827704,
+  "evidence": {
+    "model_py_LAMBDA_COST": 8.670733e-08,
+    "reproduced_buggy_value_same_n_seed": 8.670733110820901e-08,
+    "calibrate_py_code": "neutral_lambda(): burden0 = TH[:,5] * PA[:,0]; return median(burden0)/TAU.max()",
+    "why_buggy": "PA[:,0] = cumulative_incidence(theta, beta_scale) is ALREADY proportional to i0 (it is the per-capita burden). Multiplying by TH[:,5] again double-counts the seed. The declared rule median(i0*Phi_0)/tau_max needs Phi_0 = the seed-amplification factor (= burden / i0), not the burden itself.",
+    "declared_rule_corrected_value": 0.00982770365058944,
+    "ratio_corrected_over_buggy": 113343.39928332776
+  },
+  "consequence_of_the_bug": {
+    "note": "With lambda=8.67e-8 the cost term is ~1e-8 while the burden margin is ~5.6e-3, so the burden term dominates for EVERY parameter in the prior.",
+    "frac_best_action_2_over_prior": 1.0,
+    "implied_flip_threshold_i0_star_02": 5.898547312250045e-11,
+    "prior_i0_range": [1e-06, 5e-05],
+    "verdict": "decision fully degenerate (always choose maximal coverage tau=0.60); PPF identically 0; the paper's mechanism (a decision that flips across the rho-i0 ridge) cannot operate."
+  },
+  "corrected_lambda_used_in_results_cells_csv": 0.00982770365058944,
+  "decision_after_correction": {
+    "frac_best_action_0": 0.339,
+    "frac_best_action_1": 0.4205,
+    "frac_best_action_2": 0.2405,
+    "i0_star_02": 6.685614117488601e-06,
+    "i0_med_prior": 7.07106781186548e-06,
+    "verdict": "non-degenerate; all three tiers are optimal for a substantial share of the prior."
+  },
+  "suggested_one_line_fix_in_calibrate_py": "return float(np.median(PA[:, 0]) / TAU.max())   # drop the TH[:,5] factor",
+  "fraction_grid_note": "results/cells.csv (canonical) uses the corrected lambda; results/cells_lambda_model.csv preserves the original (degenerate) run for the record."
+}

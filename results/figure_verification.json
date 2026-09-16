@@ -1,0 +1,304 @@
+{
+  "figures": {
+    "fig1_drs_positive_control": {
+      "tif": {
+        "mode": "RGB",
+        "size_px": [
+          2160,
+          1980
+        ],
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "compression": "tiff_lzw"
+      },
+      "pdf": {
+        "vector_text": true,
+        "text_len": 836,
+        "fonts": [
+          "GOFYPY+Arial-BoldMT (Type0, ext='ttf')",
+          "GOFYPY+ArialMT (Type0, ext='ttf')"
+        ],
+        "fonts_embedded": true,
+        "unicode_minus_count": 0,
+        "ascii_hyphen_in_number": false,
+        "sample_has_title_words": true
+      },
+      "eps": {
+        "postscript_header": true,
+        "has_selectfont": true,
+        "has_show": true,
+        "fonttype42": true,
+        "size_bytes": 186783
+      },
+      "checks": {
+        "dpi_is_300": true,
+        "pixel_size_expected": [
+          2160,
+          1980
+        ],
+        "pixel_size_match": true,
+        "canvas_width_ok": true,
+        "canvas_width_in": 7.2,
+        "tif_rgb": true,
+        "pdf_text_vector": true,
+        "pdf_fonts_embedded": true,
+        "eps_fonttype42_vector": true,
+        "in_figure_title_words": 8,
+        "title_within_15_words": true,
+        "n_panels": 4
+      },
+      "title_text": "Variance-weighted DRS separates arms; geometric DRS does not",
+      "directional_wording": []
+    },
+    "fig2_parameter_identifiability_vs_decision_instability": {
+      "tif": {
+        "mode": "RGB",
+        "size_px": [
+          1050,
+          1020
+        ],
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "compression": "tiff_lzw"
+      },
+      "pdf": {
+        "vector_text": true,
+        "text_len": 301,
+        "fonts": [
+          "GOFYPY+Arial-BoldMT (Type0, ext='ttf')",
+          "GOFYPY+ArialMT (Type0, ext='ttf')"
+        ],
+        "fonts_embedded": true,
+        "unicode_minus_count": 0,
+        "ascii_hyphen_in_number": false,
+        "sample_has_title_words": true
+      },
+      "eps": {
+        "postscript_header": true,
+        "has_selectfont": true,
+        "has_show": true,
+        "fonttype42": true,
+        "size_bytes": 108007
+      },
+      "checks": {
+        "dpi_is_300": true,
+        "pixel_size_expected": [
+          1050,
+          1020
+        ],
+        "pixel_size_match": true,
+        "canvas_width_ok": true,
+        "canvas_width_in": 3.5,
+        "tif_rgb": true,
+        "pdf_text_vector": true,
+        "pdf_fonts_embedded": true,
+        "eps_fonttype42_vector": true,
+        "in_figure_title_words": 7,
+        "title_within_15_words": true,
+        "n_panels": 1
+      },
+      "title_text": "Parameter-level non-identifiability does not predict decision instability",
+      "directional_wording": []
+    },
+    "s1_fig_drs_vs_ppf": {
+      "tif": {
+        "mode": "RGB",
+        "size_px": [
+          1050,
+          1020
+        ],
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "compression": "tiff_lzw"
+      },
+      "pdf": {
+        "vector_text": true,
+        "text_len": 221,
+        "fonts": [
+          "GOFYPY+Arial-BoldMT (Type0, ext='ttf')",
+          "GOFYPY+ArialMT (Type0, ext='ttf')"
+        ],
+        "fonts_embedded": true,
+        "unicode_minus_count": 2,
+        "ascii_hyphen_in_number": false,
+        "sample_has_title_words": true
+      },
+      "eps": {
+        "postscript_header": true,
+        "has_selectfont": true,
+        "has_show": true,
+        "fonttype42": true,
+        "size_bytes": 110336
+      },
+      "checks": {
+        "dpi_is_300": true,
+        "pixel_size_expected": [
+          1050,
+          1020
+        ],
+        "pixel_size_match": true,
+        "canvas_width_ok": true,
+        "canvas_width_in": 3.5,
+        "tif_rgb": true,
+        "pdf_text_vector": true,
+        "pdf_fonts_embedded": true,
+        "eps_fonttype42_vector": true,
+        "in_figure_title_words": 5,
+        "title_within_15_words": true,
+        "n_panels": 1
+      },
+      "title_text": "Decision-relevance index versus decision instability",
+      "directional_wording": []
+    },
+    "fig4_snr_peakcount": {
+      "tif": {
+        "mode": "RGB",
+        "size_px": [
+          2160,
+          900
+        ],
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "compression": "tiff_lzw"
+      },
+      "pdf": {
+        "vector_text": true,
+        "text_len": 600,
+        "fonts": [
+          "GOFYPY+Arial-BoldMT (Type0, ext='ttf')",
+          "GOFYPY+ArialMT (Type0, ext='ttf')"
+        ],
+        "fonts_embedded": true,
+        "unicode_minus_count": 11,
+        "ascii_hyphen_in_number": false,
+        "sample_has_title_words": true
+      },
+      "eps": {
+        "postscript_header": true,
+        "has_selectfont": true,
+        "has_show": true,
+        "fonttype42": true,
+        "size_bytes": 163004
+      },
+      "checks": {
+        "dpi_is_300": true,
+        "pixel_size_expected": [
+          2160,
+          900
+        ],
+        "pixel_size_match": true,
+        "canvas_width_ok": true,
+        "canvas_width_in": 7.2,
+        "tif_rgb": true,
+        "pdf_text_vector": true,
+        "pdf_fonts_embedded": true,
+        "eps_fonttype42_vector": true,
+        "in_figure_title_words": 10,
+        "title_within_15_words": true,
+        "n_panels": 3
+      },
+      "title_text": "Margin SNR versus case count: prior regime and real seasons",
+      "directional_wording": []
+    },
+    "fig3_conditioning_vs_relevance": {
+      "tif": {
+        "mode": "RGB",
+        "size_px": [
+          1050,
+          1020
+        ],
+        "dpi": [
+          300.0,
+          300.0
+        ],
+        "compression": "tiff_lzw"
+      },
+      "pdf": {
+        "vector_text": true,
+        "text_len": 315,
+        "fonts": [
+          "GOFYPY+Arial-BoldMT (Type0, ext='ttf')",
+          "GOFYPY+ArialMT (Type0, ext='ttf')",
+          "GCWXDV+DejaVuSans-Oblique (Type0, ext='ttf')"
+        ],
+        "fonts_embedded": true,
+        "unicode_minus_count": 1,
+        "ascii_hyphen_in_number": false,
+        "sample_has_title_words": true
+      },
+      "eps": {
+        "postscript_header": true,
+        "has_selectfont": true,
+        "has_show": true,
+        "fonttype42": true,
+        "size_bytes": 121335
+      },
+      "checks": {
+        "dpi_is_300": true,
+        "pixel_size_expected": [
+          1050,
+          1020
+        ],
+        "pixel_size_match": true,
+        "canvas_width_ok": true,
+        "canvas_width_in": 3.5,
+        "tif_rgb": true,
+        "pdf_text_vector": true,
+        "pdf_fonts_embedded": true,
+        "eps_fonttype42_vector": true,
+        "in_figure_title_words": 7,
+        "title_within_15_words": true,
+        "n_panels": 1
+      },
+      "title_text": "Conditioning informs but does not determine decision-relevance",
+      "directional_wording": []
+    }
+  },
+  "global": {
+    "axes_unicode_minus": true,
+    "tick_render_check": {
+      "tick_labels": [
+        "\u22121",
+        "\u22120.1"
+      ],
+      "has_unicode_minus": true,
+      "has_ascii_minus": false
+    },
+    "pdf_minus_scan": {
+      "unicode_minus": 14,
+      "ascii_hyphen_in_number": 0,
+      "per_fig": {
+        "fig1_drs_positive_control": {
+          "unicode_minus": 0,
+          "ascii_hyphen_in_number": false
+        },
+        "fig2_parameter_identifiability_vs_decision_instability": {
+          "unicode_minus": 0,
+          "ascii_hyphen_in_number": false
+        },
+        "s1_fig_drs_vs_ppf": {
+          "unicode_minus": 2,
+          "ascii_hyphen_in_number": false
+        },
+        "fig4_snr_peakcount": {
+          "unicode_minus": 11,
+          "ascii_hyphen_in_number": false
+        },
+        "fig3_conditioning_vs_relevance": {
+          "unicode_minus": 1,
+          "ascii_hyphen_in_number": false
+        }
+      }
+    },
+    "directional_wording_offenders": {},
+    "n_figures_checked": 5
+  }
+}

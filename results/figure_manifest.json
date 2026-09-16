@@ -1,0 +1,149 @@
+{
+  "_note": "Publication three-piece sets. Values are read-only from results/*.",
+  "_spec": {
+    "widths_in": {
+      "single_column": 3.5,
+      "double_column": 7.2
+    },
+    "min_font_pt": 8,
+    "tif": "300 dpi, LZW, RGB",
+    "vector_text": "pdf.fonttype=42 / ps.fonttype=42",
+    "minus_sign": "Unicode U+2212 (axes.unicode_minus=True)",
+    "palette": "Okabe-Ito (colour-blind safe, no red/green clash; arms also differ by hatch, series by marker)",
+    "in_figure_title_max_words": 15
+  },
+  "figures": {
+    "fig1_drs_positive_control": {
+      "tif": "Fig1 DRS Positive Control.tif",
+      "eps": "fig1_drs_positive_control.eps",
+      "pdf": "fig1_drs_positive_control.pdf",
+      "png_preview": "fig1_drs_positive_control.png",
+      "nominal_size_in": [
+        7.2,
+        6.6
+      ],
+      "dpi_requested": 300,
+      "dpi_embedded": [
+        300,
+        300
+      ],
+      "pixels": [
+        2160,
+        1980
+      ],
+      "n_panels": 4,
+      "in_figure_title": "Variance-weighted DRS separates arms; geometric DRS does not",
+      "in_figure_title_words": 8,
+      "data_sources": [
+        "results/cells.csv"
+      ]
+    },
+    "fig2_parameter_identifiability_vs_decision_instability": {
+      "tif": "Fig2 Parameter Non-identifiability versus Decision Instability.tif",
+      "eps": "fig2_parameter_identifiability_vs_decision_instability.eps",
+      "pdf": "fig2_parameter_identifiability_vs_decision_instability.pdf",
+      "png_preview": "fig2_parameter_identifiability_vs_decision_instability.png",
+      "nominal_size_in": [
+        3.5,
+        3.4
+      ],
+      "dpi_requested": 300,
+      "dpi_embedded": [
+        300,
+        300
+      ],
+      "pixels": [
+        1050,
+        1020
+      ],
+      "n_panels": 1,
+      "in_figure_title": "Parameter-level non-identifiability does not predict decision instability",
+      "in_figure_title_words": 7,
+      "data_sources": [
+        "results/cells.csv"
+      ]
+    },
+    "s1_fig_drs_vs_ppf": {
+      "tif": "S1 Fig Decision Relevance versus Instability.tif",
+      "eps": "s1_fig_drs_vs_ppf.eps",
+      "pdf": "s1_fig_drs_vs_ppf.pdf",
+      "png_preview": "s1_fig_drs_vs_ppf.png",
+      "nominal_size_in": [
+        3.5,
+        3.4
+      ],
+      "dpi_requested": 300,
+      "dpi_embedded": [
+        300,
+        300
+      ],
+      "pixels": [
+        1050,
+        1020
+      ],
+      "n_panels": 1,
+      "in_figure_title": "Decision-relevance index versus decision instability",
+      "in_figure_title_words": 5,
+      "data_sources": [
+        "results/cells.csv",
+        "results/fisher_summary.json"
+      ]
+    },
+    "fig4_snr_peakcount": {
+      "tif": "Fig4 Margin SNR versus Case Count.tif",
+      "eps": "fig4_snr_peakcount.eps",
+      "pdf": "fig4_snr_peakcount.pdf",
+      "png_preview": "fig4_snr_peakcount.png",
+      "nominal_size_in": [
+        7.2,
+        3.0
+      ],
+      "dpi_requested": 300,
+      "dpi_embedded": [
+        300,
+        300
+      ],
+      "pixels": [
+        2160,
+        900
+      ],
+      "n_panels": 3,
+      "in_figure_title": "Margin SNR versus case count: prior regime and real seasons",
+      "in_figure_title_words": 10,
+      "data_sources": [
+        "results/laplace.csv",
+        "results/cells.csv",
+        "results/external_validity.csv",
+        "results/snr_correlation_summary.json"
+      ]
+    }
+  },
+  "supplementary": {
+    "fig3_conditioning_vs_relevance": {
+      "tif": "Fig3 Conditioning versus Decision Relevance.tif",
+      "eps": "fig3_conditioning_vs_relevance.eps",
+      "pdf": "fig3_conditioning_vs_relevance.pdf",
+      "png_preview": "fig3_conditioning_vs_relevance.png",
+      "nominal_size_in": [
+        3.5,
+        3.4
+      ],
+      "dpi_requested": 300,
+      "dpi_embedded": [
+        300,
+        300
+      ],
+      "pixels": [
+        1050,
+        1020
+      ],
+      "n_panels": 1,
+      "in_figure_title": "Conditioning informs but does not determine decision-relevance",
+      "in_figure_title_words": 7,
+      "data_sources": [
+        "results/laplace.csv",
+        "results/laplace_summary.json"
+      ]
+    }
+  }
+}
