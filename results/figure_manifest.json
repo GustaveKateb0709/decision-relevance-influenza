@@ -7,7 +7,7 @@
     },
     "min_font_pt": 8,
     "tif": "300 dpi, LZW, RGB",
-    "vector_text": "pdf.fonttype=42 / ps.fonttype=42",
+    "vector_text": "pdf.fonttype=42",
     "minus_sign": "Unicode U+2212 (axes.unicode_minus=True)",
     "palette": "Okabe-Ito (colour-blind safe, no red/green clash; arms also differ by hatch, series by marker)",
     "in_figure_title": null,
@@ -17,7 +17,6 @@
   "figures": {
     "fig1_drs_positive_control": {
       "tif": "Fig1.tif",
-      "eps": "fig1_drs_positive_control.eps",
       "pdf": "fig1_drs_positive_control.pdf",
       "png_preview": "fig1_drs_positive_control.png",
       "nominal_size_in": [
@@ -43,7 +42,6 @@
     },
     "fig2_parameter_identifiability_vs_decision_instability": {
       "tif": "Fig2.tif",
-      "eps": "fig2_parameter_identifiability_vs_decision_instability.eps",
       "pdf": "fig2_parameter_identifiability_vs_decision_instability.pdf",
       "png_preview": "fig2_parameter_identifiability_vs_decision_instability.png",
       "nominal_size_in": [
@@ -69,7 +67,6 @@
     },
     "fig4_snr_peakcount": {
       "tif": "Fig4.tif",
-      "eps": "fig4_snr_peakcount.eps",
       "pdf": "fig4_snr_peakcount.pdf",
       "png_preview": "fig4_snr_peakcount.png",
       "nominal_size_in": [
@@ -98,7 +95,6 @@
     },
     "fig3_conditioning_vs_relevance": {
       "tif": "Fig3.tif",
-      "eps": "fig3_conditioning_vs_relevance.eps",
       "pdf": "fig3_conditioning_vs_relevance.pdf",
       "png_preview": "fig3_conditioning_vs_relevance.png",
       "nominal_size_in": [
@@ -127,7 +123,6 @@
   "supplementary": {
     "s1_fig_drs_vs_ppf": {
       "tif": "S1 Fig.tif",
-      "eps": "s1_fig_drs_vs_ppf.eps",
       "pdf": "s1_fig_drs_vs_ppf.pdf",
       "png_preview": "s1_fig_drs_vs_ppf.png",
       "nominal_size_in": [

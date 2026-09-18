@@ -26,13 +26,6 @@
         "sample_has_title_words": null,
         "title_absent_from_figure": true
       },
-      "eps": {
-        "postscript_header": true,
-        "has_selectfont": true,
-        "has_show": true,
-        "fonttype42": true,
-        "size_bytes": 183977
-      },
       "checks": {
         "dpi_is_300": true,
         "pixel_size_expected": [
@@ -45,7 +38,6 @@
         "tif_rgb": true,
         "pdf_text_vector": true,
         "pdf_fonts_embedded": true,
-        "eps_fonttype42_vector": true,
         "caption_title_words": 8,
         "title_within_15_words": true,
         "title_absent_from_figure": true,
@@ -80,13 +72,6 @@
         "sample_has_title_words": null,
         "title_absent_from_figure": true
       },
-      "eps": {
-        "postscript_header": true,
-        "has_selectfont": true,
-        "has_show": true,
-        "fonttype42": true,
-        "size_bytes": 106086
-      },
       "checks": {
         "dpi_is_300": true,
         "pixel_size_expected": [
@@ -99,7 +84,6 @@
         "tif_rgb": true,
         "pdf_text_vector": true,
         "pdf_fonts_embedded": true,
-        "eps_fonttype42_vector": true,
         "caption_title_words": 7,
         "title_within_15_words": true,
         "title_absent_from_figure": true,
@@ -134,13 +118,6 @@
         "sample_has_title_words": null,
         "title_absent_from_figure": true
       },
-      "eps": {
-        "postscript_header": true,
-        "has_selectfont": true,
-        "has_show": true,
-        "fonttype42": true,
-        "size_bytes": 159574
-      },
       "checks": {
         "dpi_is_300": true,
         "pixel_size_expected": [
@@ -153,7 +130,6 @@
         "tif_rgb": true,
         "pdf_text_vector": true,
         "pdf_fonts_embedded": true,
-        "eps_fonttype42_vector": true,
         "caption_title_words": 10,
         "title_within_15_words": true,
         "title_absent_from_figure": true,
@@ -189,13 +165,6 @@
         "sample_has_title_words": null,
         "title_absent_from_figure": true
       },
-      "eps": {
-        "postscript_header": true,
-        "has_selectfont": true,
-        "has_show": true,
-        "fonttype42": true,
-        "size_bytes": 117107
-      },
       "checks": {
         "dpi_is_300": true,
         "pixel_size_expected": [
@@ -208,7 +177,6 @@
         "tif_rgb": true,
         "pdf_text_vector": true,
         "pdf_fonts_embedded": true,
-        "eps_fonttype42_vector": true,
         "caption_title_words": 7,
         "title_within_15_words": true,
         "title_absent_from_figure": true,
@@ -243,13 +211,6 @@
         "sample_has_title_words": null,
         "title_absent_from_figure": true
       },
-      "eps": {
-        "postscript_header": true,
-        "has_selectfont": true,
-        "has_show": true,
-        "fonttype42": true,
-        "size_bytes": 106797
-      },
       "checks": {
         "dpi_is_300": true,
         "pixel_size_expected": [
@@ -262,7 +223,6 @@
         "tif_rgb": true,
         "pdf_text_vector": true,
         "pdf_fonts_embedded": true,
-        "eps_fonttype42_vector": true,
         "caption_title_words": 5,
         "title_within_15_words": true,
         "title_absent_from_figure": true,

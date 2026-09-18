@@ -6,8 +6,8 @@ For every figure we emit a THREE-PIECE set into ``figures/``:
     * ``FigN.tif``               (the SI one is ``S1 Fig.tif``)  300 dpi,
                                  LZW-compressed, RGB.  The TIF name matches the
                                  PLOS citation label ("Fig 1" -> "Fig1.tif").
-    * ``figN_short_name.eps``    vector text (ps.fonttype=42)
     * ``figN_short_name.pdf``    vector text (pdf.fonttype=42)
+    * ``figN_short_name.png``    raster preview only (not a submission format)
 
 Journal-spec compliance:
     * canvas width: single column 3.5 in (89 mm) OR double column 7.2 in (183 mm)
@@ -107,7 +107,6 @@ def set_pub_style() -> None:
         "legend.frameon": False,
         "axes.unicode_minus": True,      # real Unicode minus U+2212 on ticks
         "pdf.fonttype": 42,              # embed TrueType (vector) in PDF
-        "ps.fonttype": 42,               # embed TrueType (vector) in EPS
         "mathtext.fontset": "dejavusans",
         "axes.linewidth": 0.8,
         "xtick.major.width": 0.8,
@@ -154,7 +153,9 @@ def fitted_suptitle(fig, text, base=8.5, minimum=8.0):
 
 def save_triplet(fig, tile: str, short: str, manifest, *, n_panels: int,
                  title: str, sources: list, supplementary: bool = False):
-    """Save TIF(300dpi,LZW,RGB) + EPS + PDF with vector text. Record manifest.
+    """Save TIF(300dpi,LZW,RGB) + PDF with vector text, plus a PNG preview.
+
+    Record the manifest entry.
 
     supplementary=True routes the triplet to 03_Supplementary/ in the package
     layout; otherwise it goes to 02_Figures/.
@@ -171,8 +172,6 @@ def save_triplet(fig, tile: str, short: str, manifest, *, n_panels: int,
         im = im.convert("RGB")
     im.save(p_tif, format="TIFF", compression="tiff_lzw", dpi=(300, 300))
 
-    p_eps = os.path.join(FIGS, f"{short}.eps")
-    fig.savefig(p_eps, format="eps")
     p_pdf = os.path.join(FIGS, f"{short}.pdf")
     fig.savefig(p_pdf, format="pdf")
     p_png = os.path.join(FIGS, f"{short}.png")   # raster preview only
@@ -183,7 +182,6 @@ def save_triplet(fig, tile: str, short: str, manifest, *, n_panels: int,
         px = im2.size
     manifest[short] = {
         "tif": os.path.basename(p_tif),
-        "eps": os.path.basename(p_eps),
         "pdf": os.path.basename(p_pdf),
         "png_preview": os.path.basename(p_png),
         "nominal_size_in": [round(w_in, 3), round(h_in, 3)],
@@ -433,7 +431,7 @@ def main():
             "widths_in": {"single_column": 3.5, "double_column": 7.2},
             "min_font_pt": 8,
             "tif": "300 dpi, LZW, RGB",
-            "vector_text": "pdf.fonttype=42 / ps.fonttype=42",
+            "vector_text": "pdf.fonttype=42",
             "minus_sign": "Unicode U+2212 (axes.unicode_minus=True)",
             "palette": "Okabe-Ito (colour-blind safe, no red/green clash; "
                        "arms also differ by hatch, series by marker)",

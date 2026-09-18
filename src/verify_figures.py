@@ -6,12 +6,11 @@ Checks (all from the actual files on disk -- nothing is taken on faith):
   1. TIF      : real 300 dpi embedded, RGB mode, pixel size == nominal_in * 300.
   2. PDF      : text is EXTRACTABLE (=> vector text, not outlined); fonts embedded;
                 scans the extracted text for the Unicode minus U+2212.
-  3. EPS      : valid PostScript with embedded TrueType (ps.fonttype=42 => TYPE42).
-  4. minus    : re-renders each figure and inspects the actual tick-label strings
+  3. minus    : re-renders each figure and inspects the actual tick-label strings
                 for U+2212 (and flags any ASCII hyphen-minus in numeric ticks).
-  5. title    : NO figure title is drawn inside the figure file (PLOS forbids it);
+  4. title    : NO figure title is drawn inside the figure file (PLOS forbids it);
                 the recorded caption title is <= 15 words (from the manifest).
-  6. width    : canvas width is exactly 3.5 in (single col) or 7.2 in (double col).
+  5. width    : canvas width is exactly 3.5 in (single col) or 7.2 in (double col).
 
 Figure files are DISCOVERED, never assumed: the working package keeps them in
 02_Figures/ and 03_Supplementary/, while a plain checkout may keep them in
@@ -102,18 +101,6 @@ def check_pdf(path):
     }
 
 
-def check_eps(path):
-    raw = open(path, "rb").read()
-    txt = raw[:400000].decode("latin-1", "ignore")
-    return {
-        "postscript_header": txt.startswith("%!PS") or "PS-Adobe" in txt[:200],
-        "has_selectfont": "selectfont" in txt,
-        "has_show": " show" in txt or "show\n" in txt,
-        "fonttype42": "/FontType 42" in txt or "Type42" in txt,
-        "size_bytes": len(raw),
-    }
-
-
 def rc_unicode_minus():
     import matplotlib
     matplotlib.use("Agg")
@@ -183,17 +170,15 @@ def main():
     # with the full list of paths tried, instead of failing mid-check.
     locations = {}
     for short, v in figs.items():
-        for kind in ("tif", "pdf", "eps"):
+        for kind in ("tif", "pdf"):
             locations[(short, kind)] = fig_file(v[kind])
     print(f"figures dir : {os.path.dirname(locations[(next(iter(figs)), 'tif')])}")
     for short, v in figs.items():
         w_in = v["nominal_size_in"][0]
         tif = fig_file(v["tif"])
         pdf = fig_file(v["pdf"])
-        eps = fig_file(v["eps"])
         t = check_tif(tif)
         p = check_pdf(pdf)
-        e = check_eps(eps)
         exp_px = [int(round(w_in * 300)), int(round(v["nominal_size_in"][1] * 300))]
         width_ok = abs(w_in - 3.5) < 1e-6 or abs(w_in - 7.2) < 1e-6
         dpi_ok = all(abs(x - 300) < 1 for x in t["dpi"] if x)
@@ -205,7 +190,6 @@ def main():
         p["title_absent_from_figure"] = " ".join(v["caption_title"].split()) not in norm
         rec = {
             "tif": t, "pdf": {k: val for k, val in p.items() if k != "_text"},
-            "eps": e,
             "checks": {
                 "dpi_is_300": dpi_ok,
                 "pixel_size_expected": exp_px,
@@ -215,7 +199,6 @@ def main():
                 "tif_rgb": t["mode"] == "RGB",
                 "pdf_text_vector": p["vector_text"],
                 "pdf_fonts_embedded": p["fonts_embedded"],
-                "eps_fonttype42_vector": e["fonttype42"] and e["has_selectfont"],
                 "caption_title_words": v["caption_title_words"],
                 "title_within_15_words": title_ok,
                 "title_absent_from_figure": p["title_absent_from_figure"],
@@ -235,9 +218,6 @@ def main():
               f"compression={t['compression']}")
         print(f"       pdf: text_len={p['text_len']} vector={p['vector_text']} "
               f"embedded={p['fonts_embedded']} fonts={p['fonts']}")
-        print(f"       eps: header={e['postscript_header']} "
-              f"selectfont={e['has_selectfont']} fonttype42={e['fonttype42']} "
-              f"bytes={e['size_bytes']}")
         print(f"       minus(U+2212) in pdf: {p['unicode_minus_count']} | "
               f"ascii-hyphen-as-minus: {p['ascii_hyphen_in_number']}")
         print(f"       width={w_in}in panels={v['n_panels']} "
