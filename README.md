@@ -81,7 +81,7 @@ and runs from a bare clone.
 | script | needs | where it looks |
 |---|---|---|
 | `make_figures.py` | `results/*.csv` (committed) | runs from a bare clone |
-| `verify_figures.py` | the 20 figure files (TIF/PDF/EPS) | `figures/`, `02_Figures/`, `03_Supplementary/` |
+| `verify_figures.py` | the 15 figure files (TIF/PDF/PNG) | `figures/`, `02_Figures/`, `03_Supplementary/` |
 
 `verify_figures.py` accepts either layout: the repository layout (`figures/` next to
 `src/`) or the delivery layout (the figure directories one level up from `src/`).
