@@ -1,0 +1,10 @@
+{
+  "lambda_cost": 0.00982770365058944,
+  "rule": "median(i0*Phi_0)/max(tau)",
+  "ridge_ppf": {
+    "ppf_mean": 0.2412,
+    "ppf_median": 0.16,
+    "frac_ppf_gt_0.2": 0.4325,
+    "frac_ppf_gt_0.4": 0.24
+  }
+}

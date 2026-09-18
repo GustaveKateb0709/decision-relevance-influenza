@@ -1,0 +1,24 @@
+{
+  "n_cells": 192,
+  "reproduced_cells_csv_ppf_exactly": true,
+  "ppf_flow_median": 0.5205,
+  "ppf_boxw_median": 0.47455061796334996,
+  "ratio_median": 0.6966843159314493,
+  "ess_frac_median": 0.0645597034789141,
+  "frac_cells_ess_lt_0.05": 0.3958333333333333,
+  "corr_flow_boxw": 0.436525662741031,
+  "method": "prior-importance reweighting with the flow density q(theta|x) (uniform prior) -> flow posterior restricted to the prior box",
+  "caveat": "low ESS (median 0.065; 40% of cells <0.05): the correction is a soft, noisy adjustment, not a hard number.  It does NOT overturn the headline (PPF stays ~0.4-0.7).",
+  "by_W_median": {
+    "6": {
+      "ppf_flow": 0.5149999999999999,
+      "ppf_boxw": 0.39881541063668424,
+      "ess": 0.12074498792274405
+    },
+    "10": {
+      "ppf_flow": 0.52275,
+      "ppf_boxw": 0.6675853172636064,
+      "ess": 0.0409933754798613
+    }
+  }
+}

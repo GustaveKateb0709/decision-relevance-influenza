@@ -1,0 +1,146 @@
+{
+  "lambda_reference": 0.009827704,
+  "lambda_factors": [
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "lambda_values": [
+    0.0009827704,
+    0.0029483112,
+    0.009827704,
+    0.029483112,
+    0.09827704
+  ],
+  "n_cells": 192,
+  "n_samples_per_cell": 2000,
+  "npe": "bounded (checkpoints/npe_W6.pt, npe_W10.pt)",
+  "seeds": {
+    "seasons": 7,
+    "observations": 999,
+    "posterior": "SEED + cell_id"
+  },
+  "note": "burden and posterior covariance are lambda-independent; only the action pair / optimal action / margin are recomputed per lambda.  Bounded posterior => every draw is inside the prior box, so raw PPF == box-reweighted PPF and ESS == 1.",
+  "validation": {
+    "ppf_1x_max_abs_diff_vs_cells": 0.0,
+    "snr_1x_max_abs_diff_vs_margin_snr_true": 9.71445146547012e-17,
+    "snr_1x_median_vs_cells_margin_snr_true": [
+      0.9831862020082296,
+      0.9831862020082296
+    ]
+  },
+  "table": [
+    {
+      "lambda_factor": 0.1,
+      "lambda_value": 0.0009827704,
+      "ppf_median": 0.28274999999999995,
+      "ppf_mean": 0.2365390625,
+      "ppf_iqr25": 0.0025,
+      "ppf_iqr75": 0.418875,
+      "frac_snr_lt_1": 0.671875,
+      "snr_median": 0.8152663948698289,
+      "best_action_0_pct": 3.125,
+      "best_action_1_pct": 34.375,
+      "best_action_2_pct": 62.5,
+      "best_plug_0_pct": 2.083333333333333,
+      "best_plug_1_pct": 30.729166666666668,
+      "best_plug_2_pct": 67.1875,
+      "frac_best_plug_ne_true": 0.18229166666666666,
+      "n_cells": 192
+    },
+    {
+      "lambda_factor": 0.3,
+      "lambda_value": 0.0029483112,
+      "ppf_median": 0.3095,
+      "ppf_mean": 0.26906250000000004,
+      "ppf_iqr25": 0.116,
+      "ppf_iqr75": 0.386125,
+      "frac_snr_lt_1": 0.71875,
+      "snr_median": 0.764437784873528,
+      "best_action_0_pct": 25.0,
+      "best_action_1_pct": 34.375,
+      "best_action_2_pct": 40.625,
+      "best_plug_0_pct": 11.979166666666668,
+      "best_plug_1_pct": 47.91666666666667,
+      "best_plug_2_pct": 40.10416666666667,
+      "frac_best_plug_ne_true": 0.34375,
+      "n_cells": 192
+    },
+    {
+      "lambda_factor": 1.0,
+      "lambda_value": 0.009827704,
+      "ppf_median": 0.2665,
+      "ppf_mean": 0.26653645833333334,
+      "ppf_iqr25": 0.14437499999999998,
+      "ppf_iqr75": 0.375125,
+      "frac_snr_lt_1": 0.5,
+      "snr_median": 0.9831862020082296,
+      "best_action_0_pct": 37.5,
+      "best_action_1_pct": 40.625,
+      "best_action_2_pct": 21.875,
+      "best_plug_0_pct": 36.45833333333333,
+      "best_plug_1_pct": 42.1875,
+      "best_plug_2_pct": 21.354166666666664,
+      "frac_best_plug_ne_true": 0.296875,
+      "n_cells": 192
+    },
+    {
+      "lambda_factor": 3.0,
+      "lambda_value": 0.029483112,
+      "ppf_median": 0.19,
+      "ppf_mean": 0.20025,
+      "ppf_iqr25": 0.055125,
+      "ppf_iqr75": 0.300125,
+      "frac_snr_lt_1": 0.40625,
+      "snr_median": 1.9402102167216544,
+      "best_action_0_pct": 59.375,
+      "best_action_1_pct": 28.125,
+      "best_action_2_pct": 12.5,
+      "best_plug_0_pct": 57.291666666666664,
+      "best_plug_1_pct": 35.9375,
+      "best_plug_2_pct": 6.770833333333333,
+      "frac_best_plug_ne_true": 0.25,
+      "n_cells": 192
+    },
+    {
+      "lambda_factor": 10.0,
+      "lambda_value": 0.09827704,
+      "ppf_median": 0.068,
+      "ppf_mean": 0.121640625,
+      "ppf_iqr25": 0.007124999999999999,
+      "ppf_iqr75": 0.19725,
+      "frac_snr_lt_1": 0.21875,
+      "snr_median": 4.221034634285923,
+      "best_action_0_pct": 68.75,
+      "best_action_1_pct": 31.25,
+      "best_action_2_pct": 0.0,
+      "best_plug_0_pct": 76.04166666666666,
+      "best_plug_1_pct": 23.958333333333336,
+      "best_plug_2_pct": 0.0,
+      "frac_best_plug_ne_true": 0.10416666666666667,
+      "n_cells": 192
+    }
+  ],
+  "wall_seconds": 63.9,
+  "conclusion_key_numbers": {
+    "ppf_median_stable_range_0.3x_to_3x": [
+      0.19,
+      0.3095
+    ],
+    "ppf_median_at_1x": 0.2665,
+    "frac_best_plug_ne_true_range": [
+      0.104,
+      0.344
+    ],
+    "frac_snr_lt_1_by_factor": {
+      "0.1": 0.6719,
+      "0.3": 0.7188,
+      "1": 0.5,
+      "3": 0.4063,
+      "10": 0.2188
+    }
+  },
+  "conclusion": "The core conclusions do not depend on the specific value of lambda: within a threefold band around the calibrated value the median PPF stays between 0.19 and 0.31, and at the extremes it is the decision problem itself that degenerates rather than the inference becoming more reliable."
+}

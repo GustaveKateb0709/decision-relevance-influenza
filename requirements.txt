@@ -1,0 +1,17 @@
+numpy>=2.0
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+numba>=0.60
+torch>=2.0
+
+# Figure tooling.  Not needed for the numerical pipeline, but make_figures.py
+# and verify_figures.py will not import without them, and both are listed in
+# README.md.
+pillow
+pymupdf        # verify_figures.py extracts the vector text via PyMuPDF (fitz)
+
+# Reproducing the published figures byte-for-byte needs matplotlib 3.10.9.
+# Newer releases change glyph placement slightly, so a re-render is visually
+# identical but not bit-identical; 3.11.x shifts up to ~8.7% of the pixels of
+# Fig 2 across the full canvas.  Any 3.7+ is fine for the analysis itself.

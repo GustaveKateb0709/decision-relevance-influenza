@@ -1,0 +1,17 @@
+{
+  "n_cells": 200,
+  "n_sloppy_counts": {
+    "2": 95,
+    "3": 95,
+    "5": 7,
+    "4": 3
+  },
+  "drs_geo_median": 0.000984412540963963,
+  "drs_geo_control_median": 0.002572514997412922,
+  "drs_var_median": 0.16907212488357173,
+  "drs_var_control_median": 0.07401393292572343,
+  "frac_margin_snr_lt_1": 0.625,
+  "frac_margin_snr_lt_0p5": 0.42,
+  "shrink_max_median": 1.6102180971357711,
+  "shrink_min_median": 1.0000000000167963
+}
